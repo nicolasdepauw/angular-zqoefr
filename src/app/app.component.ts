@@ -16,19 +16,22 @@ export class AppComponent {
 
   constructor(private counterService: CounterService) {
     this.counter = counterService;
-    this.initializeGame();
-    this.counter.start();
+    this.initializeGame();    
   }
   initializeGame() {
     this.noOfTries = 10;
     this.original = Math.floor(Math.random() * 100 + 1);
     this.guess = null;
     this.deviation = null;
-    
+    this.counter.start();
   }
   verifyGuess() {
     this.deviation = this.original - this.guess;
     this.noOfTries = this.noOfTries - 1;
+    if (this.noOfTries===0)
+    {
+      this.counter.stop();
+    }
   }
 }
 
