@@ -12,19 +12,23 @@ export class AppComponent {
   noOfTries: number;
   original: number;
   guess: number;
+  counter: CounterService;
 
-  constructor(public counterService: CounterService) {
+  constructor(private counterService: CounterService) {
+    this.counter = counterService;
     this.initializeGame();
+    this.counter.start();
   }
   initializeGame() {
-    this.noOfTries = 0;
+    this.noOfTries = 10;
     this.original = Math.floor(Math.random() * 100 + 1);
     this.guess = null;
     this.deviation = null;
+    
   }
   verifyGuess() {
     this.deviation = this.original - this.guess;
-    this.noOfTries = this.noOfTries + 1;
+    this.noOfTries = this.noOfTries - 1;
   }
 }
 

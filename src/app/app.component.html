@@ -21,5 +21,9 @@
       <p class="text-info">No of guesses :
         <span class="badge">{{noOfTries}}</span>
       </p>
-      <p>Counter: {{ counterService.counter }}</p>
+      <p>Counter: {{ counter.counter }}</p>
+      <div>
+         <p *ngIf="noOfTries==0" class="alert alert-warning">Je bent verloren.</p>   
+         <p *ngIf="counter.counter==0" class="alert alert-warning">Je bent verloren.</p>        
+      </div>
   </div>
