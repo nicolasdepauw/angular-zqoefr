@@ -9,8 +9,8 @@
        <div>
          <label>Your Guess: </label>
          <input type="number" [value]="guess" (input)="guess = $event.target.value" />
-         <button mat-raised-button (click)="verifyGuess()" class="btn btn-primary btn-sm">Verify</button>
-         <button mat-raised-button (click)="initializeGame()" class="btn btn-warning btn-
+         <button (click)="verifyGuess()" class="btn btn-primary btn-sm">Verify</button>
+         <button (click)="initializeGame()" class="btn btn-warning btn-
                                                                sm">Restart</button>
        </div>
       <div>
