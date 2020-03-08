@@ -7,8 +7,8 @@ import { CounterService } from './counter.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  providers:    [ CounterService ],
-  declarations: [ AppComponent ],
+  providers:    [ CounterService  ],
+  declarations: [ AppComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

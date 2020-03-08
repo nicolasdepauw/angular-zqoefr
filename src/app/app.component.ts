@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CounterService } from './counter.service';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'my-app',
