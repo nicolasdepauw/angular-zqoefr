@@ -28,7 +28,7 @@ export class AppComponent {
   verifyGuess() {
     this.deviation = this.original - this.guess;
     this.noOfTries = this.noOfTries - 1;
-    if (this.noOfTries===0)
+    if (this.noOfTries===0 || this.deviation===0)
     {
       this.counter.stop();
     }

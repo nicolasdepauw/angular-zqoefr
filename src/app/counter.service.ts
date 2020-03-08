@@ -5,7 +5,7 @@ export class CounterService implements OnInit, OnDestroy {
   intervalId = 0;
 
   message = '';
-  counter = 10;
+  counter = 100;
 
   clearTimer() { clearInterval(this.intervalId); }
 
@@ -20,7 +20,7 @@ export class CounterService implements OnInit, OnDestroy {
 
   private countDown() {
     this.clearTimer();
-    this.counter = 10;
+    this.counter = 100;
     this.intervalId = window.setInterval(() => {
       this.counter -= 1;
       if (this.counter === 0) {

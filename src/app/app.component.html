@@ -16,7 +16,6 @@
       <div>
          <p *ngIf="deviation<0" class="alert alert-warning">Your guess is higher.</p>
          <p *ngIf="deviation>0" class="alert alert-warning">Your guess is lower.</p>
-         <p *ngIf="deviation===0" class="alert alert-success">Yes! That's it.</p>
       </div>
       <p class="text-info">Guesses left :
         <span class="badge">{{noOfTries}}</span>
@@ -24,6 +23,7 @@
       <p>Time left: {{ counter.counter }}</p>
       <div>
          <p *ngIf="noOfTries==0" class="alert alert-warning">You have lost. Please restart!</p>   
-         <p *ngIf="counter.counter==0" class="alert alert-warning">You have lost. Please restart!</p>        
+         <p *ngIf="counter.counter==0" class="alert alert-warning">You have lost. Please restart!</p>  
+         <p *ngIf="deviation===0" class="alert alert-success">Yes! You have won! Please restart to play again!</p>      
       </div>
   </div>
