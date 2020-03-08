@@ -3,13 +3,13 @@
         <div class="card bg-light mb-3">
            <div class="card-body">
               <p class="card-text">Guess the computer generated random number between 1
-                                                                          and 1000.</p>
+                                                                          and 100.</p>
            </div>
         </div>
        <div>
          <label>Your Guess: </label>
          <input type="number" [value]="guess" (input)="guess = $event.target.value" />
-         <button (click)="verifyGuess()" class="btn btn-primary btn-sm">Verify</button>
+         <button mat-button (click)="verifyGuess()" class="btn btn-primary btn-sm">Verify</button>
          <button (click)="initializeGame()" class="btn btn-warning btn-
                                                                sm">Restart</button>
        </div>
@@ -21,4 +21,5 @@
       <p class="text-info">No of guesses :
         <span class="badge">{{noOfTries}}</span>
       </p>
+      <p>Counter: {{ counterService.counter }}</p>
   </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CounterService } from './counter.service';
 
 @Component({
   selector: 'my-app',
@@ -12,12 +13,12 @@ export class AppComponent {
   original: number;
   guess: number;
 
-  constructor() {
+  constructor(public counterService: CounterService) {
     this.initializeGame();
   }
   initializeGame() {
     this.noOfTries = 0;
-    this.original = Math.floor(Math.random() * 1000 + 1);
+    this.original = Math.floor(Math.random() * 100 + 1);
     this.guess = null;
     this.deviation = null;
   }
@@ -26,3 +27,5 @@ export class AppComponent {
     this.noOfTries = this.noOfTries + 1;
   }
 }
+
+
